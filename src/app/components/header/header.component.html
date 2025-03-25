@@ -1,0 +1,20 @@
+<header>
+    <nav>
+        <ul>
+            <li><a [routerLink]="'Home'">Home</a></li>
+            <li>Sobre</li>
+            <li>Contato</li>
+            @if (login) 
+            {
+                <li>Dashboard</li>
+                <li>Perfil</li>
+                <li (click)="logout()">Sair</li>
+            }
+            @else
+            {
+                <li><a [routerLink]="'Login'">Login</a></li>
+                <li>Registrar</li>
+            }
+        </ul>
+    </nav>
+</header>

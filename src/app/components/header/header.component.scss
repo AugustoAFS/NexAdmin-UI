@@ -1,0 +1,52 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    top: 0;
+  
+    nav {
+      display: flex;
+      justify-content: center;
+  
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          cursor: pointer;
+  
+          a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+  
+            &:hover {
+              color: #ffa500; /* cor de destaque */
+            }
+          }
+  
+          &:hover {
+            color: #ffa500;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      nav {
+        ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+  
