@@ -7,9 +7,9 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-
-      { path: 'Home', component: HomeComponent },
-      { path: '', redirectTo: 'Home', pathMatch: 'full' },
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: '**', redirectTo: '', pathMatch: 'full' }
     ]
   }
 ];

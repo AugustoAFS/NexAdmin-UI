@@ -1,52 +1,86 @@
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    top: 0;
-  
-    nav {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #5E17EB, #B935F6);
+  height: 80px;
+  font-family: Arial, sans-serif;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-logo {
+      img {
+        height: 40px;
+        width: auto;
+      }
+    }
+
+    .navbar-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      justify-content: center;
-  
-      ul {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-        padding: 0;
-        margin: 0;
-  
-        li {
-          font-size: 1.1rem;
-          text-transform: uppercase;
-          cursor: pointer;
-  
-          a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s;
-  
-            &:hover {
-              color: #ffa500; /* cor de destaque */
-            }
-          }
-  
+      gap: 2rem;
+
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 500;
+
           &:hover {
             color: #ffa500;
           }
         }
       }
     }
-  }
-  
-  @media (max-width: 768px) {
-    header {
-      nav {
-        ul {
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-        }
+
+    .user-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      padding: 0px 0px;
+      padding-left: 20px;
+      gap: 10px;
+      color: white;
+      width: 150px;
+      box-sizing: border-box;
+      background-color: #00000060;
+
+      .username {
+        font-size: 14px;
+        font-weight: bold;
+        flex: 1;
+        text-align: left;
+      }
+
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
       }
     }
   }
-  
+}
+
+@media (max-width: 768px) {
+  header {
+    .navbar {
+      .navbar-menu {
+        display: none;
+      }
+
+      .user-container {
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+}

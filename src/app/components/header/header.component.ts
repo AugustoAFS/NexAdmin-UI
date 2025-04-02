@@ -12,6 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   login: boolean = false;
+  Nome: string = "Usuario"
 
   constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
 
