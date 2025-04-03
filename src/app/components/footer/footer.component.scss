@@ -6,6 +6,8 @@ footer {
     justify-content: center;
     position: fixed;
     bottom: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 
     .footer-container {
         width: 100%;
@@ -23,12 +25,90 @@ footer {
             img {
                 height: 30px;
                 width: auto;
+                transition: all 0.3s ease;
             }
 
             .footer-info {
                 color: white;
                 font-size: 14px;
                 margin: 0;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    footer {
+        padding: 14px;
+
+        .footer-container {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    footer {
+        padding: 12px;
+
+        .footer-container {
+            padding: 0 16px;
+
+            .footer-left {
+                gap: 12px;
+
+                img {
+                    height: 25px;
+                }
+
+                .footer-info {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 10px;
+
+        .footer-container {
+            padding: 0 12px;
+
+            .footer-left {
+                gap: 10px;
+
+                img {
+                    height: 22px;
+                }
+
+                .footer-info {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 8px;
+
+        .footer-container {
+            padding: 0 8px;
+
+            .footer-left {
+                gap: 8px;
+
+                img {
+                    height: 18px;
+                }
+
+                .footer-info {
+                    font-size: 10px;
+                }
             }
         }
     }

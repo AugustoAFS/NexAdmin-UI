@@ -21,8 +21,9 @@ header {
             margin-left: -9%;
             
             img {
-                height: 30px;
+                height: 35px;
                 width: auto;
+                object-fit: contain;
             }
         }
 
@@ -43,11 +44,12 @@ header {
                     display: block;
                     padding: 8px 16px;
                     border-radius: 4px;
-                    transition: background-color 0.2s;
+                    transition: all 0.2s ease;
 
                     &:hover {
                         background-color: rgba(255, 255, 255, 0.1);
                         text-decoration: none;
+                        transform: translateY(-2px);
                     }
                 }
             }
@@ -57,48 +59,126 @@ header {
             display: flex;
             align-items: center;
             color: white;
+            width: 9,5%;
+            height: auto;
             font-size: 14px;
             background: rgba(0, 0, 0, 0.482);
             border-radius: 50px;
             gap: 12px;
-            position: absolute;
-            right: -9%;
-            width: 10%;
-            padding: 4px;
+            padding: 4px 5px;
+            margin-right: -9%;
+            transition: all 0.3s ease;
 
             .username {
-                font-weight: 500;
-                margin-left: 12px;
+                white-space: wrap;
+                margin-left: 20px;
+                margin-right: 5px;
             }
 
             img {
-                background: rgba(0, 0, 0, 0.482);
-                width: 45px;
-                height: 45px;
+                width: 50px;
+                height: 50px;
                 border-radius: 50%;
-                margin-left: auto;
+                margin-right: -4px;
+                object-fit: cover;
+                background: rgba(0, 0, 0, 0.51);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    header .navbar {
+        padding: 0 12px;
+
+        .navbar-logo {
+            margin-left: 0;
+        }
+
+        .user-container {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        height: 70px;
+
+        .navbar {
+            .navbar-menu {
+                gap: 1.5rem;
+            }
+
+            .user-container {
+                padding: 4px 8px;
+
+                img {
+                    margin-right: -8px;
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
     }
 }
 
 @media (max-width: 768px) {
-    header .navbar {
-        padding: 0 12px;
-        
-        .navbar-menu {
-            gap: 1rem;
-        }
+    header {
+        height: 60px;
 
-        .user-container .username {
-            display: none;
+        .navbar {
+            padding: 0 12px;
+            
+            .navbar-menu {
+                gap: 1rem;
+                font-size: 12px;
+            }
+
+            .user-container {
+                padding: 4px;
+                
+                .username {
+                    display: none;
+                }
+
+                img {
+                    justify-content: center;
+                    margin-right: 0px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
         }
     }
 }
 
-@media (max-width: 480px) {
-    header .navbar .navbar-menu {
-        display: none;
+@media (max-width: 576px) {
+    header {
+        height: 50px;
+
+        .navbar {
+            padding: 0 8px;
+
+            .navbar-logo img {
+                height: 25px;
+            }
+
+            .navbar-menu {
+                display: none;
+            }
+
+            .user-container {
+                padding: 2px;
+                
+                img {
+                    justify-content: center;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
     }
 }
 
