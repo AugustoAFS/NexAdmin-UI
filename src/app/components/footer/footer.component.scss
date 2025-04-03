@@ -1,77 +1,28 @@
 .Footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    background: linear-gradient(to right, #0046aa, #0077e6);
-    color: #fff;
-    padding: 20px 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    background: #003087;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 
     .footer-container {
+        width: 100%;
+        max-width: 1200px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 0 10px;
 
-        .footer-left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 450px;
-            margin-left: 38%;
-
-            .Logo-footer {
-                width: 60%;
-                max-width: 200px;
-                margin-bottom: 10px;
-            }
-
-            .footer-info {
-                font-size: clamp(12px, 2vw, 15px);
-                margin: 0;
-            }
+        img {
+            height: 35px;
+            width: auto;
         }
+    }
 
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-
-            .footer-column {
-                text-align: left;
-
-                h3 {
-                    font-size: clamp(12px, 2vw, 14px);
-                    margin-bottom: 10px;
-                    border-bottom: 1px solid #fff;
-                    display: inline-block;
-                }
-
-                ul {
-                    list-style: none;
-                    padding: 0;
-
-                    li {
-                        margin-bottom: 8px;
-
-                        a {
-                            color: #fff;
-                            text-decoration: none;
-                            font-size: clamp(10px, 1.8vw, 12px);
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    .footer-text {
+        color: white;
+        font-size: 14px;
+        text-align: center;
     }
 }
