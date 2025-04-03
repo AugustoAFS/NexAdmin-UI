@@ -1,28 +1,35 @@
-.Footer {
+footer {
     width: 100%;
-    background: #003087;
+    background: linear-gradient(to right, #002266, #003087);
     padding: 16px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
 
     .footer-container {
         width: 100%;
         max-width: 1200px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        padding: 0 24px;
 
-        img {
-            height: 35px;
-            width: auto;
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            img {
+                height: 30px;
+                width: auto;
+            }
+
+            .footer-info {
+                color: white;
+                font-size: 14px;
+                margin: 0;
+            }
         }
-    }
-
-    .footer-text {
-        color: white;
-        font-size: 14px;
-        text-align: center;
     }
 }
