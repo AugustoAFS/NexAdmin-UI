@@ -1,59 +1,94 @@
-# SalaAdminUI
+# SalaAdmin.UI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Interface administrativa moderna e responsiva desenvolvida com Angular.
 
-## Development server
+## 🚀 Tecnologias
 
-To start a local development server, run:
+- Angular 19
+- SCSS
+- TypeScript
+- HTML5
+- CSS3
 
+## ✨ Funcionalidades
+
+- Interface moderna e responsiva
+- Cards interativos com efeitos de hover
+- Layout adaptativo para diferentes tamanhos de tela
+- Navegação intuitiva entre módulos
+- Design consistente com gradientes e animações suaves
+
+## 📦 Módulos Principais
+
+- **Currículos**: Gerenciamento de currículos
+- **Empresas**: Auditoria e edição de empresas
+- **Vagas**: Controle de vagas disponíveis
+- **Financeiro**: Gestão financeira
+- **Relatórios**: Análises e relatórios
+- **Configurações**: Configurações do sistema
+
+## 🛠️ Instalação
+
+1. Clone o repositório:
+```bash
+git clone [url-do-repositorio]
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Execute o projeto:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+4. Acesse no navegador:
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🎨 Estrutura do Projeto
 
-```bash
-ng generate --help
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── card/
+│   │   ├── footer/
+│   │   └── header/
+│   ├── pages/
+│   │   ├── home/
+│   │   └── layout/
+│   └── styles/
+├── assets/
+│   └── icon/
+└── styles.scss
 ```
 
-## Building
+## 📱 Responsividade
 
-To build the project run:
+- Desktop: Layout completo com cards expandidos
+- Tablet: Ajuste automático do grid
+- Mobile: Cards em coluna única
 
-```bash
-ng build
-```
+## 🎯 Design System
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Cores**: 
+  - Gradiente Principal: #8a2be2 → #1e90ff
+  - Texto: #ffffff
+  - Fundo: #f8f9fa
 
-## Running unit tests
+- **Tipografia**:
+  - Títulos: 1.5rem
+  - Texto: 0.9rem
+  - Responsiva para diferentes dispositivos
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 👥 Contribuição
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
