@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-sidebar',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.scss'
 })
-export class CardComponent {
+export class SidebarComponent {
   constructor(private router: Router) {}
 
   navigateTo(path: string): void {

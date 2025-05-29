@@ -1,0 +1,167 @@
+@import '../../../styles.scss';
+
+.Side-bar {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(to right, $azul-escuro, $azul-claro);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin-right: auto;
+  
+    h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+      text-align: center;
+    }
+  
+    .Side-title {
+      font-size: 20px;
+    }
+  
+    .Side-Card {
+      width: 100%;
+      height: 10%;
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-top: 10px;
+      gap: 15px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+  
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+  
+      &:first-child {
+        border: 2px solid white;
+        background: #ffffff;
+        color: $azul-escuro;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+  
+      &:hover {
+        background: $azul-escuro;
+        color: white;
+        transform: translateY(-2px);
+      }
+    }
+  }
+  
+  .Side-info {
+    padding-left: 8%;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .Input-curriculo {
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    color: black;
+  
+    input {
+      flex: 1;
+      width: 450px;
+      height: 60px;
+      padding: 0 10px;
+      border: 2px solid #ffffff;
+      background-color: transparent;
+      border-radius: 5px;
+      font-size: 16px;
+      color: black;
+      outline: none;
+      transition: border-color 0.3s ease;
+      border: 1px solid black;
+  
+      &:focus {
+        border-color: #00ff2f;
+      }
+  
+      &:focus ~ label,
+      &:not(:placeholder-shown) ~ label {
+        font-size: 0.8rem;
+        top: 10px;
+        background-color: #ffffff;
+        color: #00ff2f;
+        padding: 0 5px;
+        border-radius: 5px;
+      }
+    }
+  
+    label {
+      position: absolute;
+      left: 30px;
+      top: 40%;
+      font-size: 1rem;
+      color: black;
+      background-color: transparent;
+      padding: 0 5px;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Side-bar {
+      width: 200px;
+    }
+  
+    .Side-Card {
+      font-size: 0.9rem;
+  
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Side-bar {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      height: auto;
+      border-radius: 15px 15px 0 0;
+    }
+  
+    .Side-Card {
+      width: calc(50% - 10px);
+      justify-content: center;
+    }
+  
+    .Side-info {
+      display: none;
+    }
+  }
+  

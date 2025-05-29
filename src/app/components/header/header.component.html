@@ -1,6 +1,5 @@
 <header>
     <nav class="navbar">
-        <!-- Logo -->
         <div class="navbar-logo">
             <img src="/assets/Logo_BNE.png" alt="Logo" />
         </div>
@@ -9,11 +8,12 @@
             <li><a [routerLink]="'/home'">Home</a></li>
             <li><a [routerLink]="'/login'">Login</a></li>
         </ul>
-
-        <!-- Container do Usuário -->
-        <div class="user-container">
-            <span class="username">{{ Nome }}</span>
-            <img src="/assets/icon/icons_user.svg" alt="Foto do perfil do usuário" />
-        </div>
+        
+        @if (Login === true) {
+            <div class="user-container">
+                <span class="username">{{ Nome }}</span>
+                <img src="/assets/icon/Usuario.png" alt="Foto do perfil do usuário" />
+            </div>
+        }
     </nav>
 </header>

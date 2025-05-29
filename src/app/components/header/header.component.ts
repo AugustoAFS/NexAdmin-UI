@@ -12,28 +12,10 @@ import { CommonModule } from '@angular/common';
   imports: [RouterLink, CommonModule]
 })
 export class HeaderComponent implements OnInit {
-  login: boolean = false;
+  Login: boolean = true;
   Nome: string = "Usuario"
 
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngOnInit() {
-    this.verificarLogin();
-  }
-
-  verificarLogin() {
-    if (isPlatformBrowser(this.platformId)) {
-      // Verifique se estamos no lado do cliente (navegador)
-      this.login = localStorage.getItem('jwtToken') !== null;
-    }
-  }
-
-  logout() {
-    if (isPlatformBrowser(this.platformId)) {
-      // Verifique se estamos no lado do cliente (navegador)
-      localStorage.removeItem('jwtToken');
-      this.login = false;
-      this.router.navigate(['/home']);
-    }
+  ngOnInit(): void {
+    
   }
 }

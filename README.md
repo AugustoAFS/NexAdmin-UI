@@ -1,4 +1,4 @@
-# SalaAdmin.UI
+# NexAdmin.UI
 
 Interface administrativa moderna e responsiva desenvolvida com Angular.
 
