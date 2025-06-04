@@ -7,14 +7,6 @@
     flex-direction: column;
     gap: 2rem;
 
-    .content-section {
-        max-width: 1400px;
-        margin: 0 auto;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        padding: 1rem;
 
         .card {
             background: white;
@@ -39,30 +31,63 @@
                 line-height: 1.6;
                 font-size: 1rem;
             }
+        }
 
-            .home-chat-container {
+        .home-chat-container {
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+
+            .home-chat-button {
+                position: relative;
+                margin-left: 80%;
+                border-radius: 50%;
+                background-color: #004fa3;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+                border: none;
+                cursor: pointer;
                 display: flex;
-                flex-direction: column;
-                width: 100%;
-                height: 100%;
-                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
 
-                .home-chat-button {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: #00c73f;
+                }
+
+                .home-chat-title {
+                    position: absolute;
+                    top: -40px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(-5deg);
+                    background-color: #004fa3;
+                    color: white;
+                    padding: 5px 15px;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    white-space: nowrap;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover .home-chat-title {
+                    opacity: 1;
+                    transform: translateX(-60%) rotate(-10deg) translateY(-2px);
+                }
+
+                img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
-
-                .home-chat-body {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-
             }
         }
-    }
 }
 
 // Responsividade
